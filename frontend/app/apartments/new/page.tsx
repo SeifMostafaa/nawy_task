@@ -45,12 +45,12 @@ export default function NewApartmentPage() {
       <h1 className="text-xl font-semibold">Add apartment</h1>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Unit name" name="unitName" maxLength={100} required />
           <Field label="Unit number" name="unitNumber" maxLength={20} required />
         </div>
         <Field label="Project" name="project" maxLength={100} required />
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <Field label="Price (EGP)" name="price" type="number" min="0" max="1000000000" step="any" required />
           <Field label="Bedrooms" name="bedrooms" type="number" min="0" max="20" required />
           <Field label="Bathrooms" name="bathrooms" type="number" min="0" max="20" required />
